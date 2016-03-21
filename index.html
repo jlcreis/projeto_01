@@ -1,0 +1,70 @@
+<html ng-app="MyApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <title>Pesquisa</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="lib/fw7/css/framework7.material.css">
+    <link rel="stylesheet" href="lib/fw7/css/framework7.material.colors.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel='stylesheet' type='text/css' href="lib/bootstrap/bootstrap.css">
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/fw7/js/framework7.min.js"></script>
+    
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/service/InitService.js"></script>
+    <script type="text/javascript" src="js/controllers/IndexPageController.js"></script>
+    
+    <script src="lib/swiper/swiper.min.js"></script>
+</head>
+    
+<body ng-controller="IndexPageController">
+    <div class="titulo"><h1 ng-bind = "app"></h1></div>
+    
+    
+      <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="view/img/arroz.PNG"></div>
+            <div class="swiper-slide"><img src="view/img/chocolate.PNG"></div>
+            <div class="swiper-slide"><img src="view/img/feijao.PNG"></div>
+            <div class="swiper-slide"><img src="view/img/leite.PNG"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows 
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>-->
+    </div>
+
+    <!-- Search Bar -->
+    <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+        <div class="searchbar-input">
+          <input type="search" placeholder="Pesquisar"><a href="#" class="searchbar-clear"></a>
+        </div><a href="#" class="searchbar-cancel">Cancel</a>
+    </form>
+    
+    <div class="content-block">
+      <div class="row no-gutter">
+        <div class="col-50">50%</div>
+        <div class="col-50">50%</div>
+      </div>
+      <div class="row no-gutter">
+        <div class="col-50">50%</div>
+        <div class="col-50">50%</div>
+      </div>
+    </div>
+        
+
+    
+
+    
+</body>
+    
+</html>
