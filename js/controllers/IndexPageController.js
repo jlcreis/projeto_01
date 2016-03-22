@@ -4,9 +4,11 @@
 MyApp.angular.controller('IndexPageController', ['$scope', '$http', 'InitService', function ($scope, $http, InitService) {
   'use strict';
     
-    $scope.app = "Pesquisa";
+    $scope.app = "Pague Menos Carandaí";
+    $scope.loja = "Lojas";
+    $scope.promocao = "Promoções";
     
-    //Initialize Swiper -->
+    //Initialize Swiper
     
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
@@ -16,8 +18,10 @@ MyApp.angular.controller('IndexPageController', ['$scope', '$http', 'InitService
         spaceBetween: 30,
         centeredSlides: true,
         autoplay: 2500,
+        loop: true,
         autoplayDisableOnInteraction: false
     });
+    
     
     
   InitService.addEventListener('ready', function () {

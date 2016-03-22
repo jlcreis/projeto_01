@@ -5,7 +5,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     
-    <title>Pesquisa</title>
+    <title>Pague Menos</title>
     
     <!-- Styles -->
     <link rel="stylesheet" href="lib/fw7/css/framework7.material.css">
@@ -24,11 +24,26 @@
     <script src="lib/swiper/swiper.min.js"></script>
 </head>
     
-<body ng-controller="IndexPageController">
+<body ng-controller="IndexPageController" class="fundo">
     <div class="titulo"><h1 ng-bind = "app"></h1></div>
     
+    <!-- Swiper lojas-->
+    <div class="subTitulo"><h4 ng-bind = "loja"></h4></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="view/img/lojas/bahamas.PNG"></div>
+            <div class="swiper-slide"><img src="view/img/lojas/bh.PNG"></div>
+            <div class="swiper-slide"><img src="view/img/lojas/sales.PNG"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows 
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>-->
+    </div>
     
-      <!-- Swiper -->
+      <!-- Swiper promoções -->
+    <div class="subTitulo"><h4 ng-bind = "promocao"></h4></div>
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="view/img/arroz.PNG"></div>
@@ -47,8 +62,14 @@
     <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
         <div class="searchbar-input">
           <input type="search" placeholder="Pesquisar"><a href="#" class="searchbar-clear"></a>
-        </div><a href="#" class="searchbar-cancel">Cancel</a>
+        </div>
+        <a href="#" class="searchbar-cancel">Cancel</a>
     </form>
+    
+    <p class="buttons-row">
+      <a href="#" class="button button-big button-fill button-raised color-red">Lojas</a>
+      <a href="#" class="button button-big button-fill button-raised color-green">Listas</a>
+    </p> 
     
     <div class="content-block">
       <div class="row no-gutter">

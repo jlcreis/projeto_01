@@ -1,9 +1,23 @@
+.fundo{
+    background: #39F;
+}
+
 .titulo{
     
     text-align: center;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+    
+}
+
+.subTitulo{
+    
+    text-align: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: DimGray;
     
 }
 .table{

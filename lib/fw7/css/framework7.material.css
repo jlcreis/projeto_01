@@ -3114,7 +3114,7 @@ html:not(.watch-active-state) .button.button-fill:active,
 .button.button-big {
   height: 48px;
   line-height: 48px;
-  border-radius: 3px;
+  border-radius: 6px;
 }
 .button i.icon + span,
 .button span:not(.ripple-wave) + span,
