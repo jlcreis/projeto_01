@@ -3,8 +3,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    
+    <!--meta name="apple-mobile-web-app-status-bar-style" content="black"-->
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
     <title>Pague Menos</title>
     
     <!-- Styles -->
@@ -24,65 +25,91 @@
     <script src="lib/swiper/swiper.min.js"></script>
 </head>
     
-<body ng-controller="IndexPageController" class="fundo">
-    <div class="titulo"><h1 ng-bind = "app"></h1></div>
+<body>
+    <div clas="views">
+    <div class="view view-main">
+    <div class="pages navbar-fixed toolbar-fixed">
     
-    <!-- Swiper lojas-->
-    <div class="subTitulo"><h4 ng-bind = "loja"></h4></div>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="view/img/lojas/bahamas.PNG"></div>
-            <div class="swiper-slide"><img src="view/img/lojas/bh.PNG"></div>
-            <div class="swiper-slide"><img src="view/img/lojas/sales.PNG"></div>
+    <div data-page="index" class="page">
+        <!-- Top Navbar. In Material theme it should be inside of the page-->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="center">Pague Menos</div>
+            </div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows 
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>-->
     </div>
-    
-      <!-- Swiper promoções -->
-    <div class="subTitulo"><h4 ng-bind = "promocao"></h4></div>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="view/img/arroz.PNG"></div>
-            <div class="swiper-slide"><img src="view/img/chocolate.PNG"></div>
-            <div class="swiper-slide"><img src="view/img/feijao.PNG"></div>
-            <div class="swiper-slide"><img src="view/img/leite.PNG"></div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows 
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>-->
-    </div>
+              
+        <div ng-controller="IndexPageController">
+        <!--div class="titulo"><h1 ng-bind = "app"></h1></div-->
 
-    <!-- Search Bar -->
-    <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
-        <div class="searchbar-input">
-          <input type="search" placeholder="Pesquisar"><a href="#" class="searchbar-clear"></a>
+        <!-- Swiper lojas-->
+        <div class="subTitulo"><h4 ng-bind = "loja"></h4></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="view/img/lojas/bahamas.PNG"></div>
+                <div class="swiper-slide"><img src="view/img/lojas/bh.PNG"></div>
+                <div class="swiper-slide"><img src="view/img/lojas/sales.PNG"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows 
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>-->
         </div>
-        <a href="#" class="searchbar-cancel">Cancel</a>
-    </form>
-    
-    <p class="buttons-row">
-      <a href="#" class="button button-big button-fill button-raised color-red">Lojas</a>
-      <a href="#" class="button button-big button-fill button-raised color-green">Listas</a>
-    </p> 
-    
-    <div class="content-block">
-      <div class="row no-gutter">
-        <div class="col-50">50%</div>
-        <div class="col-50">50%</div>
-      </div>
-      <div class="row no-gutter">
-        <div class="col-50">50%</div>
-        <div class="col-50">50%</div>
-      </div>
-    </div>
+
+        <!-- Swiper promoções -->
+        <div class="subTitulo"><h4 ng-bind = "promocao"></h4></div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="view/img/arroz.PNG"></div>
+                <div class="swiper-slide"><img src="view/img/chocolate.PNG"></div>
+                <div class="swiper-slide"><img src="view/img/feijao.PNG"></div>
+                <div class="swiper-slide"><img src="view/img/leite.PNG"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows 
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>-->
+        </div>
+
+        <!-- Barra de Pesquisa -->
+        <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+            <div class="searchbar-input">
+              <input type="search" placeholder="Pesquisar"><a href="#" class="searchbar-clear"></a>
+            </div>
+            <a href="#" class="searchbar-cancel">Cancel</a>
+        </form>
+
+        <p class="buttons-row">
+          <a href="#detailsPage" class="button button-big button-fill button-raised color-red">Lojas</a>
+          <a href="#" class="button button-big button-fill button-raised color-green">Listas</a>
+        </p> 
+
+        <!-- Page 2 -->
+          <div data-page="detailsPage" class="page cached" ng-controller="DetailPageController">
+            <!-- Page content-->
+            <div class="page-content">
+                <div class="content-block">
+                  <div class="row no-gutter">
+                    <div class="col-50">50%</div>
+                    <div class="col-50">50%</div>
+                  </div>
+                  <div class="row no-gutter">
+                    <div class="col-50">50%</div>
+                    <div class="col-50">50%</div>
+                  </div>
+                </div>
+            </div>
+          </div>
         
-
+        </div>
+        
+        
+    </div>
+    </div>
+    </div>
+    </div>
     
 
     
